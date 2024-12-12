@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <div class="container mx-auto py-10">
+        <h1 class="text-5xl font-extrabold text-yellow-400 text-center mb-12">Movies</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for movie in movies %}
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 ease-in-out">
+                <img src="{{ movie.poster }}" alt="{{ movie.title }}" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold text-yellow-300 mb-4">{{ movie.title }}</h2>
+                    <p class="text-gray-300 mb-6">{{ movie.description }}</p>
+                    <a href="/movies/{{ movie.id }}" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded font-semibold hover:bg-yellow-500 transition ease-in-out">View Details</a>
+                    <!-- Link to the Info page -->
+                    <a href="/movies/info/{{ movie.id }}" class="bg-yellow-500 text-gray-900 px-4 py-2 rounded font-semibold hover:bg-yellow-600 mt-4 block text-center">More Info</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

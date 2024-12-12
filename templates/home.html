@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Tailwind's default gradient background */
+        .bg-home {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1600x900?text=Movie+Background') no-repeat center center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <div class="bg-home h-screen flex flex-col justify-center items-center text-center text-white bg-opacity-80">
+        <h1 class="text-6xl font-extrabold text-yellow-400 mb-8 animate__animated animate__fadeIn animate__delay-1s">Welcome to the Movie App</h1>
+        <p class="text-xl mb-8 animate__animated animate__fadeIn animate__delay-2s">Discover, explore, and dive into your favorite movies.</p>
+        <a href="/movies" class="bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg font-semibold text-lg hover:bg-yellow-500 transition ease-in-out transform hover:scale-105">
+            View Movies
+        </a>
+    </div>
+
+    <!-- Include Tailwind animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></script>
+</body>
+</html>
